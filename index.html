@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<title></title>
+
+<style>
+	body{background: #848484;}
+	h1{
+		color: #00cae5; 
+		font-family: "Instrument Serif", serif; 
+		text-align: center;
+		font-size: 40px;
+		padding-bottom: 20px}
+	img {width: 200px; height: auto; object-fit: cover; }
+.container{ display: flex; 
+  			justify-content: center;
+			gap: 50px;}
+.rotate{transform: rotate(13deg);}
+.border{border-radius: 100%}
+
+
+</style>
+
+</head>
+
+<body>
+
+	<h1>✼ ASMR for CHRISTMAS ✼</h1>
+
+<div class="container">
+	<audio id="bellSnd" src="bell.wav"></audio>
+	<audio id="stepSnd" src="step.wav"></audio>
+	<audio id="candleSnd" src="candle.wav"></audio>
+	<audio id="santaSnd" src="santa.wav"></audio>
+	<audio id="glassSnd" src="glass.wav"></audio>
+	<img id="bellBut" src="bell.png">
+	<img id="stepBut" src="step.png" style="transform: rotate(-2deg);">
+	<img id="candleBut" src="candle.png" style="transform: rotate(3deg);">
+	<img id="santaBut" src="santa.png" class="border" style="transform: rotate(5deg);">
+	<img id="glassBut" src="glass.png">
+</div>
+
+
+<script>
+let bellPlayState = false;
+bellBut.onclick = function(){
+if(!bellPlayState){
+bellSnd.play();
+bellBut.style.filter = "drop-shadow(0px 0px 9px #f9aeff)";
+bellPlayState = true;
+}else{
+bellSnd.pause();
+bellBut.style.filter = "none";
+bellPlayState = false;
+}
+}
+ 
+let stepPlayState = false;
+stepBut.onclick = function(){
+if(!stepPlayState){
+stepSnd.play();
+stepBut.style.filter = "drop-shadow(0px 0px 9px #f9aeff)";
+stepPlayState = true;
+}else{
+stepSnd.pause();
+stepBut.style.filter = "none";
+stepPlayState = false;
+}
+}
+
+let candlePlayState = false;
+candleBut.onclick = function(){
+if(!candlePlayState){
+candleSnd.play();
+candleBut.style.filter = "drop-shadow(0px 0px 9px #f9aeff)";
+candlePlayState = true;
+}else{
+candleSnd.pause();
+candleBut.style.filter = "none";
+candlePlayState = false;
+}
+}
+
+let santaPlayState = false;
+santaBut.onclick = function(){
+if(!santaPlayState){
+santaSnd.play();
+santaBut.style.filter = "drop-shadow(0px 0px 9px #f9aeff)";
+santaPlayState = true;
+}else{
+santaSnd.pause();
+santaBut.style.filter = "none";
+santaPlayState = false;
+}
+}
+
+let glassPlayState = false;
+glassBut.onclick = function(){
+if(!glassPlayState){
+glassSnd.play();
+glassBut.style.filter = "drop-shadow(0px 0px 9px #f9aeff)";
+glassPlayState = true;
+}else{
+glassSnd.pause();
+glassBut.style.filter = "none";
+glassPlayState = false;
+}
+}
+
+
+santaSnd.volume = 0.7;
+</script>
+</body>
+</html>
